@@ -24,4 +24,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [segue.destinationViewController setValue:self forKey:@"delegate"];
+}
+
+#pragma mark AddressBookPickerDelegate
+- (void)addressBookPicker:(EmailAddressBookPickerViewController *)controller didFinishWithResults:(NSDictionary *)results {
+    
+    [[[UIAlertView alloc] initWithTitle:@"You selected" message:results.description delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
 @end

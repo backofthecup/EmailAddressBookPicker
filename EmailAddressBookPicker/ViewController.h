@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "EmailAddressBookPickerViewController.h"
+
+@interface ViewController : UIViewController<EmailAddressBookPickerDelegate>
 
 
 @end

@@ -14,6 +14,7 @@
 		8914400B1A3DF0FD00A51E39 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8914400A1A3DF0FD00A51E39 /* Images.xcassets */; };
 		8914400E1A3DF0FD00A51E39 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8914400C1A3DF0FD00A51E39 /* LaunchScreen.xib */; };
 		8914401A1A3DF0FE00A51E39 /* EmailAddressBookPickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 891440191A3DF0FE00A51E39 /* EmailAddressBookPickerTests.m */; };
+		891440281A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891440271A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		891440131A3DF0FD00A51E39 /* EmailAddressBookPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmailAddressBookPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		891440181A3DF0FE00A51E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		891440191A3DF0FE00A51E39 /* EmailAddressBookPickerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailAddressBookPickerTests.m; sourceTree = "<group>"; };
+		891440261A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailAddressBookPickerViewController.h; sourceTree = "<group>"; };
+		891440271A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailAddressBookPickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +86,14 @@
 			children = (
 				891440011A3DF0FD00A51E39 /* AppDelegate.h */,
 				891440021A3DF0FD00A51E39 /* AppDelegate.m */,
-				891440041A3DF0FD00A51E39 /* ViewController.h */,
-				891440051A3DF0FD00A51E39 /* ViewController.m */,
-				891440071A3DF0FD00A51E39 /* Main.storyboard */,
+				891440261A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.h */,
+				891440271A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.m */,
 				8914400A1A3DF0FD00A51E39 /* Images.xcassets */,
 				8914400C1A3DF0FD00A51E39 /* LaunchScreen.xib */,
+				891440071A3DF0FD00A51E39 /* Main.storyboard */,
 				89143FFD1A3DF0FD00A51E39 /* Supporting Files */,
+				891440041A3DF0FD00A51E39 /* ViewController.h */,
+				891440051A3DF0FD00A51E39 /* ViewController.m */,
 			);
 			path = EmailAddressBookPicker;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				891440061A3DF0FD00A51E39 /* ViewController.m in Sources */,
 				891440031A3DF0FD00A51E39 /* AppDelegate.m in Sources */,
 				891440001A3DF0FD00A51E39 /* main.m in Sources */,
+				891440281A3DF2EC00A51E39 /* EmailAddressBookPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +303,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
