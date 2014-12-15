@@ -133,7 +133,7 @@
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
     nameLabel.text = name;
     
-    // display email address in cell subtitle
+    // display email addresses
     UILabel *emailLabel = (UILabel *)[cell viewWithTag:200];
     ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
     if (ABMultiValueGetCount(emails) > 1) {
@@ -144,9 +144,8 @@
         emailLabel.text = email;
         
     }
+    
     CFRelease(emails);
-    
-    
     CFRelease(person);
     CFRelease(addressBook);
     
