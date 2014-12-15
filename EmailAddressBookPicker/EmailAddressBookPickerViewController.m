@@ -94,7 +94,7 @@
     ABRecordRef copy = ABAddressBookGetPersonWithRecordID(addressBook, recordId);
     NSData  *imgData = (NSData *)CFBridgingRelease(ABPersonCopyImageDataWithFormat(copy, kABPersonImageFormatThumbnail));
     
-    UIImageView *imageView = cell.imageView;
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:300];
     if (imgData) {
         UIImage *image = [UIImage imageWithData:imgData];
         imageView.image = image;
@@ -130,16 +130,18 @@
             CFRelease(emails);
         }
     }
-    cell.textLabel.text = name;
+    UILabel *nameLabel = (UILabel *)[cell viewWithTag:100];
+    nameLabel.text = name;
     
     // display email address in cell subtitle
+    UILabel *emailLabel = (UILabel *)[cell viewWithTag:200];
     ABMultiValueRef emails = ABRecordCopyValue(person, kABPersonEmailProperty);
     if (ABMultiValueGetCount(emails) > 1) {
-        cell.detailTextLabel.text = @"Multiple emails";
+        emailLabel.text = @"Multiple emails";
     }
     else {
         NSString *email = (__bridge_transfer NSString*) ABMultiValueCopyValueAtIndex(emails, 0);
-        cell.detailTextLabel.text = email;
+        emailLabel.text = email;
         
     }
     CFRelease(emails);
